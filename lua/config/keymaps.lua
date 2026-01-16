@@ -9,3 +9,10 @@ map({ "n", "v" }, "<leader>p", '"_dP', { desc = "Paste without overwriting regis
 map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without overwriting register" })
 vim.keymap.del("n", "<leader>cd")
 map("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+
+if vim.g.vscode then
+  local vscode = require("vscode")
+  map("n", "<leader>oo", function()
+    vscode.call("outline.focus")
+  end)
+end

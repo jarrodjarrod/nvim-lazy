@@ -6,8 +6,8 @@ return {
       -- Be aware that you also will need to properly configure your LSP server to
       -- provide the inlay hints.
       inlay_hints = {
-        enabled = true,
-        exclude = { "go" }, -- filetypes for which you don't want to enable inlay hints
+        enabled = false,
+        exclude = { "go", "typescript" }, -- filetypes for which you don't want to enable inlay hints
       },
       servers = {
         ["*"] = {
@@ -19,7 +19,7 @@ return {
               { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration", },
               { "grr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References", },
               { "gri", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation", },
-              { "grt", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition", },
+              { "grt", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto Type Definition", },
               -- disable a keymap
               { "gr", false },
             },

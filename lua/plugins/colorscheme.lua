@@ -1,12 +1,13 @@
 return {
   { "projekt0n/github-nvim-theme", name = "github-theme" },
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "github_dark",
+      colorscheme = "rose-pine",
     },
     keys = {
-      { "<leader>l", false },
+      { "<leader>lz", false },
     },
   },
 }

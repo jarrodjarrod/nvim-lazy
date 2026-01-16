@@ -26,8 +26,11 @@ if true then
     },
     {
       "tpope/vim-fugitive",
-      keys = { { "<leader>gf", "<cmd>vertical Git<cr>" } },
+      keys = {
+        { "<leader>gf", "<cmd>vertical Git<cr>" },
+      },
     },
+    {},
   }
 end
 

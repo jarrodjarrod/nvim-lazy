@@ -19,9 +19,7 @@ return {
   },
   {
     "brianhuster/live-preview.nvim",
-    dependencies = { "folke/snacks.nvim" },
     cmd = "LivePreview",
-    ft = { "markdown", "html", "asciidoc", "svg" },
     config = function()
       require("livepreview.config").set({
         picker = "snacks.picker",

@@ -3,7 +3,8 @@
 -- Add any additional keymaps here
 local map = vim.keymap.set
 
-map("n", "<leader>cp", '<cmd>let @+=expand("%")<cr>', { desc = "Copy path" })
+map("n", "<leader>cp", '<cmd>let @+=expand("%:.")<cr>', { desc = "Copy Path (relative)" })
+map("n", "<leader>cP", '<cmd>let @+=expand("%:p")<cr>', { desc = "Copy Path (absolute)" })
 map("n", "J", "mzJ`z", { desc = "Join lines keep cursor" })
 map("x", "<leader>p", '"_dP', { desc = "Paste without overwriting register" })
 map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without overwriting register" })

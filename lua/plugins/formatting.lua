@@ -10,9 +10,5 @@ return {
         yaml = { "yamlfmt" },
       },
     },
-    -- stylua: ignore
-    keys = {
-      { "<leader>lf", function() LazyVim.format({ force = true }) end, mode = { "n", "v" }, desc = "Format" },
-    },
   },
 }

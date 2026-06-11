@@ -1,12 +1,11 @@
 return {
   {
+    "mason-org/mason.nvim",
+    opts = { ensure_installed = { "yamlfmt" } },
+  },
+  {
     "stevearc/conform.nvim",
     opts = {
-      formatters = {
-        prettier = {
-          prepend_args = { "--ignore-path", ".prettierignore" },
-        },
-      },
       formatters_by_ft = {
         yaml = { "yamlfmt" },
       },

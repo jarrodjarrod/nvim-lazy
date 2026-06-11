@@ -15,13 +15,31 @@ return {
   },
   {
     "iamcco/markdown-preview.nvim",
+    enabled = false,
+  },
+  {
+    "brianhuster/live-preview.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    cmd = "LivePreview",
+    ft = { "markdown", "html", "asciidoc", "svg" },
+    config = function()
+      require("livepreview.config").set({
+        picker = "snacks.picker",
+        sync_scroll = true,
+      })
+    end,
     keys = {
-      { "<leader>cp", false },
       {
         "<leader>mp",
         ft = "markdown",
-        "<cmd>MarkdownPreviewToggle<cr>",
-        desc = "Markdown Preview",
+        "<cmd>LivePreview start<cr>",
+        desc = "Markdown Preview Start",
+      },
+      {
+        "<leader>mP",
+        ft = "markdown",
+        "<cmd>LivePreview close<cr>",
+        desc = "Markdown Preview Close",
       },
     },
   },

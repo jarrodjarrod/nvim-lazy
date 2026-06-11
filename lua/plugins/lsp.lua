@@ -11,18 +11,52 @@ return {
       },
       servers = {
         ["*"] = {
-              -- stylua: ignore
-            keys = {
-              -- change a keymap
-              { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition", },
-              { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition", },
-              { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration", },
-              { "grr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References", },
-              { "gri", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation", },
-              { "grt", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto Type Definition", },
-              -- disable a keymap
-              { "gr", false },
+          keys = {
+            -- change a keymap
+            {
+              "gd",
+              function()
+                Snacks.picker.lsp_definitions()
+              end,
+              desc = "Goto Definition",
+              has = "definition",
             },
+            {
+              "gD",
+              function()
+                Snacks.picker.lsp_declarations()
+              end,
+              desc = "Goto Declaration",
+              has = "declaration",
+            },
+            {
+              "grr",
+              function()
+                Snacks.picker.lsp_references()
+              end,
+              nowait = true,
+              desc = "References",
+              has = "references",
+            },
+            {
+              "gri",
+              function()
+                Snacks.picker.lsp_implementations()
+              end,
+              desc = "Goto Implementation",
+              has = "implementation",
+            },
+            {
+              "grt",
+              function()
+                Snacks.picker.lsp_type_definitions()
+              end,
+              desc = "Goto Type Definition",
+              has = "typeDefinition",
+            },
+            -- disable a keymap
+            { "gr", false },
+          },
         },
         gopls = {
           settings = {

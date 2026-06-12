@@ -11,6 +11,10 @@ map({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without overwriting regis
 pcall(vim.keymap.del, "n", "<leader>cd")
 map("n", "gl", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
 
+-- free <leader>l as a prefix (grep/format maps live under it) and move Lazy to lz
+pcall(vim.keymap.del, "n", "<leader>l")
+map("n", "<leader>lz", "<cmd>Lazy<cr>", { desc = "Lazy" })
+
 if vim.g.vscode then
   local vscode = require("vscode")
   map("n", "<leader>oo", function()

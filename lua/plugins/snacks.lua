@@ -15,5 +15,8 @@ return {
     { "<leader>sH", LazyVim.pick("files", { hidden = true }), desc = "Find Hidden Files" },
     { "<leader>sI", LazyVim.pick("files", { hidden = true, ignored = true }), desc = "Find Ignored Files" },
     { "<leader>fs", function() Snacks.picker.grep({ search = function() return vim.fn.input("Grep for > ") end }) end, desc = "Grep for Input" },
+    { "<leader>lg", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
+    { "<leader>lG", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
+    { "<leader>lh", LazyVim.pick("live_grep", { hidden = true }), desc = "Grep Hidden" },
   },
 }

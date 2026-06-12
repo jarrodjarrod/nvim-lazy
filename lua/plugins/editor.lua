@@ -12,6 +12,12 @@ return {
     lazy = false,
   },
   {
+    "folke/which-key.nvim",
+    opts = function(_, opts)
+      table.insert(opts.spec, { "<leader>l", group = "grep/lazy" })
+    end,
+  },
+  {
     "gbprod/yanky.nvim",
     keys = {
       -- the extra maps <leader>p in n+x mode; the x-mode map would clobber the

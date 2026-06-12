@@ -18,5 +18,7 @@ return {
     { "<leader>lg", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" },
     { "<leader>lG", LazyVim.pick("live_grep", { root = false }), desc = "Grep (cwd)" },
     { "<leader>lh", LazyVim.pick("live_grep", { hidden = true }), desc = "Grep Hidden" },
+    { "<leader>z", function() Snacks.lazygit({ cwd = LazyVim.root.git() }) end, desc = "LazyGit (Root Dir)" },
+    { "<leader>Z", function() Snacks.lazygit() end, desc = "LazyGit (cwd)" },
   },
 }

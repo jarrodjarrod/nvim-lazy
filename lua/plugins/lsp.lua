@@ -76,10 +76,10 @@ return {
             },
           },
         },
-        tsgo = {
-          -- nvim-lspconfig aliases tsgo to tsc, whose default command prefers a
-          -- project-local `tsc`. Force the standalone Mason tsgo binary instead.
-          cmd = { vim.fn.stdpath("data") .. "/mason/bin/tsgo", "--lsp", "--stdio" },
+        vtsls = { enabled = false },
+        tsgo = { enabled = false },
+        tsc = {
+          cmd = { vim.fn.stdpath("data") .. "/mason/bin/tsc", "--lsp", "--stdio" },
         },
         postgres_lsp = {},
       },

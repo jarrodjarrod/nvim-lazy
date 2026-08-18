@@ -32,6 +32,11 @@ return {
             bg = "palette.severe.emphasis",
             style = "bold",
           },
+          DiffText = {
+            fg = "palette.fg.on_emphasis",
+            bg = "palette.attention.emphasis",
+            style = "bold",
+          },
           WinSeparator = { fg = "palette.border.default" },
         },
       },
